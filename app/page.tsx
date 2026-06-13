@@ -1,65 +1,857 @@
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+export default function Portfolio() {
+  {
+    /* CASE STUDIES DATA */
+  }
+  {
+    /* Place this array before your return statement or at the top of your file */
+  }
+
+  {
+    /* CRISIS DATA */
+  }
+  const crisisStatements = [
+    {
+      title: "Homelander Holding Statement",
+      content:
+        "I am aware of the video circulating of an incident that occurred last night. I want to extend my sincere apology to the employees and the customers impacted by my actions. I did not treat you with the respect you deserved in that moment, and I deeply regret my behavior. Having the responsibility of the United States is taxing and I had a lapse of judgment. I want you all to know that despite my actions last night, protecting the citizens of the United States is my main priority and I will continue to do so.",
+    },
+    {
+      title: "Vought Holding Statement",
+      content:
+        "Last night, Homelander was involved in an incident that has understandably raised public concern. While we do not condone the behavior shown in the video, we recognize the immense pressure and responsibility that Homelander carry every day in protecting the American people. We are currently reviewing the full context of the situation and remain confident in Homelander’s long-standing commitment to national safety and security. We sincerely apologize to the employees and customers affected by the incident and appreciate the public’s patience as we continue to address this matter responsibly.",
+    },
+    {
+      title: "A. “Acknowledge & Act” Statement",
+      content:
+        "Vought is aware of the incident involving Homelander that took place at VoughtBurger last night. We are interviewing those most affected and determining the most productive course of action. We believe this can be a learning opportunity for all involved. Please watch this space for any updates.",
+    },
+    {
+      title: "B. “Correction” Statement",
+      content:
+        "Vought would like to clarify the facts of the incident at VoughtBurger last night. Rumors have been spread that misrepresent the situation and paint Homelander in a negative light. We are not defending Homelander’s actions nor his words, but he did not use any slurs or purposefully inflammatory language.",
+    },
+  ];
+  const campaignData = [
+    {
+      id: 1,
+      title: "Stranger Votes: The Race to Save Hawkins",
+      challenge:
+        "The town of Hawkins faced a crisis of public trust following a series of unexplained disasters, disappearances, and government cover-ups. The challenge was to design a mayoral campaign for candidate Maya Brooks that addressed residents' fears without inciting panic. We needed to acknowledge the threats the town faced while shifting the focus toward practical recovery, mental health, and community stability, positioning Maya as a leader who prioritizes families and holistic safety over government denial.",
+      strategy:
+        "Our primary audience was parents and caregivers, a demographic that truly needed stability and youth protection. We centered our messaging around the slogan 'Healing Hawkins Together,' focusing on trauma-informed responses and neighborhood recovery rather than monster-containment theories. To reach voters, I designed a communication strategy that relied on empathetic channels like parent-focused podcasts, PTA meetings, and local news interviews. We prioritized grass-roots engagement to frame Maya as a relatable community advocate rather than a traditional politician.",
+      execution:
+        "I developed a comprehensive campaign schedule with community-driven events like healing circles, town halls, and school visits. For our media plan, I focused on organic social media spotlights, targeted ads, and we came up with a 'dog mayor' endorsement. In addition to outlining the schedule and communication strategy, I served as the face of the campaign by portraying Maya Brooks in a live mayoral debate. During the debate, I utilized our prepared talking points to pivot from opponent attacks regarding containment plans back to our core message of community healing and family safety.",
+    },
+    {
+      id: 2,
+      title: "Launch Room Fight: Strategic Product Debut",
+      challenge:
+        "We needed to launch an unconventional cologne, Asphalt™, where we chose to target 14-22 year old men while facing a simultaneous competitor launch. The challenge was managing public skepticism of a product that we chose to position as heavily, white rapidly establishing market dominance before our rival could gain any traction.",
+      strategy:
+        "We positioned Asphalt™ as an attainable status symbol representing ambition. We leaned into a polarizing, high-status aesthetic, targeting red-pilled male podcasters and influencers to entrench the scent into modern masculine culture. By anticipating and accepting pushback from broader audiences, we used the resulting controversy to build insider loyalty among our core demographic.",
+      execution:
+        "I developed the core launch strategy, beginning with a mystery phase of blank black squares posted by our influencer partners. I then structured a series of artificial, limited-edition product drops to manufacture scarcity and demand. Additionally, I directed the campaign's visual aesthetic, utilizing dark tones, metallic finishes, and a trophy-shaped bottle, to outsell our competitor and capture our target audience.",
+    },
+  ];
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        .pg {
+          font-family: 'Space Grotesk', sans-serif;
+          background: #FFFAF8;
+          color: #1A1018;
+          min-height: 100vh;
+        }
+
+        /* NAV */
+        .nav {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          background: rgba(255,250,248,0.92);
+          backdrop-filter: blur(12px);
+          border-bottom: 1.5px solid #FFE8F1;
+          padding: 0 2rem;
+        }
+        .nav-inner {
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 60px;
+        }
+        .nav-logo {
+          font-weight: 700;
+          font-size: 1.25rem;
+          color: #FF3D8A;
+          letter-spacing: -0.02em;
+        }
+        .nav-links {
+          display: flex;
+          gap: 0.25rem;
+          list-style: none;
+        }
+        .nav-links a {
+          display: block;
+          padding: 0.4rem 0.9rem;
+          border-radius: 99px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: #1A1018;
+          text-decoration: none;
+          transition: background 0.15s, color 0.15s;
+        }
+        .nav-links a:hover {
+          background: #FFE8F1;
+          color: #FF3D8A;
+        }
+
+        /* WRAPPER */
+        .wrap {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        /* HERO */
+        .hero {
+          padding: 5rem 2rem 4rem;
+          max-width: 1100px;
+          margin: 0 auto;
+          scroll-margin-top: 60px;
+        }
+        .hero-tag {
+          display: inline-block;
+          background: #FFE8F1;
+          color: #FF3D8A;
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 0.35rem 0.9rem;
+          border-radius: 99px;
+          margin-bottom: 1.5rem;
+        }
+        .hero-name {
+          font-size: clamp(4rem, 10vw, 8rem);
+          font-weight: 700;
+          line-height: 0.95;
+          letter-spacing: -0.03em;
+          color: #1A1018;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+        .squiggle {
+          display: block;
+          margin-top: 0.3rem;
+        }
+        .hero-subtitle {
+          font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+          font-weight: 500;
+          color: #FF6B2B;
+          margin-top: 1.25rem;
+          margin-bottom: 1.5rem;
+          letter-spacing: -0.01em;
+        }
+        .hero-bio {
+          font-size: 1.05rem;
+          line-height: 1.75;
+          color: #6B5060;
+          max-width: 560px;
+          margin-bottom: 2rem;
+        }
+        .pill-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 2.5rem;
+        }
+        .pill {
+          background: white;
+          border: 1.5px solid #FFD6E9;
+          color: #FF3D8A;
+          font-size: 0.82rem;
+          font-weight: 600;
+          padding: 0.4rem 1rem;
+          border-radius: 99px;
+        }
+        .cta-btn {
+          display: inline-block;
+          background: #FF3D8A;
+          color: white;
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 0.85rem 2rem;
+          border-radius: 99px;
+          text-decoration: none;
+          letter-spacing: 0.01em;
+          transition: background 0.15s, transform 0.1s;
+        }
+        .cta-btn:hover {
+          background: #e62e7a;
+          transform: translateY(-1px);
+        }
+
+        /* SECTION EYEBROW */
+        .eyebrow {
+          display: inline-block;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #FF3D8A;
+          margin-bottom: 0.75rem;
+        }
+
+        /* SECTION */
+        .section {
+          padding: 5rem 2rem;
+          max-width: 1100px;
+          margin: 0 auto;
+          scroll-margin-top: 60px;
+        }
+        .section-title {
+          font-size: clamp(2rem, 4vw, 2.75rem);
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          line-height: 1.1;
+          margin-bottom: 0.5rem;
+          color: #1A1018;
+        }
+        .section-sub {
+          font-size: 1rem;
+          color: #6B5060;
+          margin-bottom: 3rem;
+          max-width: 480px;
+          line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .quote-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+        }
+        .quote-card {
+          background: white;
+          border: 1.5px solid #FFE8F1;
+          border-radius: 1.5rem;
+          padding: 2rem;
+          position: relative;
+        }
+        .quote-mark {
+          font-size: 4rem;
+          line-height: 1;
+          color: #FFD6E9;
+          font-weight: 700;
+          position: absolute;
+          top: 1rem;
+          left: 1.5rem;
+        }
+        .quote-text {
+          font-size: 0.95rem;
+          color: #6B5060;
+          line-height: 1.7;
+          padding-top: 2rem;
+          margin-bottom: 1.5rem;
+          font-style: italic;
+        }
+        .quote-author {
+          font-weight: 600;
+          font-size: 0.85rem;
+          color: #1A1018;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+        .quote-author::before {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: #FF6B2B;
+          border-radius: 2px;
+        }
+
+        /* CASE STUDIES */
+        .sprint-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .sprint-card {
+          background: white;
+          border: 1.5px solid #FFE8F1;
+          border-radius: 1.5rem;
+          overflow: hidden;
+          transition: border-color 0.15s;
+        }
+        .sprint-card:hover {
+          border-color: #FF3D8A;
+        }
+        .sprint-header {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          padding: 1.5rem 2rem;
+          border-bottom: 1.5px solid #FFE8F1;
+          background: #FFFAF8;
+        }
+        .sprint-num {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #FFD6E9;
+          line-height: 1;
+          letter-spacing: -0.04em;
+        }
+        .sprint-title {
+          font-size: 1.15rem;
+          font-weight: 600;
+          color: #1A1018;
+          letter-spacing: -0.01em;
+        }
+        .sprint-body {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0;
+        }
+        .sprint-col {
+          padding: 1.5rem 2rem;
+          border-right: 1.5px solid #FFE8F1;
+        }
+        .sprint-col:last-child {
+          border-right: none;
+        }
+        .sprint-col-label {
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 0.6rem;
+        }
+        .sprint-col-label.pink { color: #FF3D8A; }
+        .sprint-col-label.orange { color: #FF6B2B; }
+        .sprint-col-text {
+          font-size: 0.875rem;
+          color: #6B5060;
+          line-height: 1.65;
+        }
+
+        /* COLLATERAL */
+        .collateral-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1.25rem;
+        }
+        .coll-card {
+          border-radius: 1.5rem;
+          padding: 1.75rem;
+          transition: transform 0.15s;
+        }
+        .coll-card:hover { transform: translateY(-2px); }
+        .coll-card.a { background: #FFE8F1; }
+        .coll-card.b { background: #FFE8DC; }
+        .coll-title {
+          font-size: 1rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: #1A1018;
+          letter-spacing: -0.01em;
+        }
+        .coll-list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+        .coll-list li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.85rem;
+          color: #6B5060;
+        }
+        .coll-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #FF3D8A;
+          flex-shrink: 0;
+        }
+        .coll-dot.orange { background: #FF6B2B; }
+        .coll-list a {
+          color: inherit;
+          text-decoration: none;
+          transition: color 0.1s;
+        }
+        .coll-list a:hover { color: #FF3D8A; }
+
+        /* CRISIS */
+        .crisis-wrap {
+          background: #1A1018;
+          border-radius: 2rem;
+          padding: 3rem;
+          position: relative;
+          overflow: hidden;
+        }
+        .crisis-blob {
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          background: #FF3D8A;
+          opacity: 0.08;
+          top: -120px;
+          right: -80px;
+          pointer-events: none;
+        }
+        .crisis-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: rgba(255,61,138,0.15);
+          color: #FF3D8A;
+          border: 1px solid rgba(255,61,138,0.3);
+          border-radius: 99px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 0.4rem 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .crisis-title {
+          font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+          font-weight: 700;
+          color: white;
+          letter-spacing: -0.025em;
+          line-height: 1.1;
+          margin-bottom: 0.5rem;
+        }
+        .crisis-source {
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #6B5060;
+          margin-bottom: 2rem;
+        }
+        .crisis-card {
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 1.25rem;
+          padding: 2rem;
+          max-width: 640px;
+        }
+        .crisis-card-title {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: white;
+          margin-bottom: 0.75rem;
+          letter-spacing: -0.01em;
+        }
+        .crisis-card-text {
+          font-size: 0.9rem;
+          color: #a89098;
+          line-height: 1.7;
+          margin-bottom: 1.5rem;
+        }
+        .crisis-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.25rem;
+        }
+        .crisis-link {
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: opacity 0.15s;
+        }
+        .crisis-link.pink { color: #FF3D8A; }
+        .crisis-link.orange { color: #FF6B2B; }
+        .crisis-link:hover { opacity: 0.7; }
+
+        /* BLOG */
+        .blog-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.25rem;
+        }
+        .blog-card {
+          background: white;
+          border: 1.5px solid #FFE8F1;
+          border-radius: 1.5rem;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          transition: border-color 0.15s;
+        }
+        .blog-card:hover { border-color: #FF3D8A; }
+        .blog-card.alt { background: #FFE8DC; border-color: #FFD6C0; }
+        .blog-card.alt:hover { border-color: #FF6B2B; }
+        .blog-tag {
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+        .blog-tag.pink { color: #FF3D8A; }
+        .blog-tag.muted { color: #a89098; }
+        .blog-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #1A1018;
+          letter-spacing: -0.015em;
+          line-height: 1.3;
+          margin-bottom: 0.75rem;
+        }
+        .blog-snippet {
+          font-size: 0.875rem;
+          color: #6B5060;
+          line-height: 1.65;
+          flex-grow: 1;
+          margin-bottom: 1.5rem;
+        }
+        .blog-link {
+          font-size: 0.8rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #FF3D8A;
+          transition: opacity 0.15s;
+          margin-top: auto;
+        }
+        .blog-link.orange { color: #FF6B2B; }
+        .blog-link:hover { opacity: 0.7; }
+        .media-thumb {
+          aspect-ratio: 16/9;
+          background: #FFE8F1;
+          border-radius: 0.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          color: #e5a8c4;
+          margin-bottom: 1.25rem;
+          border: 1px solid #FFD6E9;
+        }
+
+        /* FOOTER */
+        .footer {
+          background: #1A1018;
+          color: #6B5060;
+          text-align: center;
+          padding: 3rem 2rem;
+          font-size: 0.85rem;
+          margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+          .sprint-body { grid-template-columns: 1fr; }
+          .sprint-col { border-right: none; border-bottom: 1.5px solid #FFE8F1; }
+          .sprint-col:last-child { border-bottom: none; }
+          .nav-links a { padding: 0.35rem 0.6rem; font-size: 0.78rem; }
+        }
+      `}</style>
+
+      <div className="pg">
+        {/* NAV */}
+        <nav className="nav">
+          <div className="nav-inner">
+            <span className="nav-logo">ananya.</span>
+            <ul className="nav-links">
+              {[
+                ["About", "#about"],
+                ["Case Studies", "#case-studies"],
+                ["Written & Digital", "#collateral"],
+                ["Crisis", "#crisis"],
+                ["Blog", "#blog"],
+              ].map(([label, href]) => (
+                <li key={label}>
+                  <a href={href}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        {/* HERO */}
+        <section id="about" className="hero flex flex-col gap-6">
+          {/* Image and Name In-Line */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8">
+            <div className="w-32 h-32 md:w-40 md:h-40 bg-pink-50 rounded-full border-4 border-white shadow-sm flex items-center justify-center text-pink-400 font-medium shrink-0 overflow-hidden">
+              <img
+                src="ananya_image.jpg"
+                alt="Ananya"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <h5 className="hero-name relative inline-block m-0">
+              Hi, I'm Ananya
+              <svg
+                className="squiggle absolute -bottom-2 left-0"
+                width="340"
+                height="18"
+                viewBox="0 0 340 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 13 C30 5, 56 18, 85 10 S140 3, 170 11 S225 18, 255 10 S310 3, 336 11"
+                  stroke="#FF6B2B"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </h5>
+          </div>
+
+          {/* Text Content */}
+          <div className="flex-1 space-y-4">
+            <p className="hero-subtitle">
+              software engineer and marketing professional
+            </p>
+            <p className="hero-bio">
+              I'm a fourth-year student at Northwestern University pursuing
+              combined Bachelor's and Master's degrees in Computer Science with
+              a minor in Art and a certificate in Integrated Marketing
+              Communications from the Medill School of Journalism. My goal is to
+              bring an interdisciplinary perspective to software engineering by
+              incorporating principles from human-computer interaction,
+              mathematics, consumer psychology, and graphical interface design.
+            </p>
+            <div className="pill-group pt-2">
+              {[
+                "Media Relations",
+                "Crisis Management",
+                "Audience Segmentation",
+                "Digital Content",
+              ].map((s) => (
+                <span key={s} className="pill">
+                  {s}
+                </span>
+              ))}
+            </div>
+            <div className="pt-4">
+              <a href="/resume.pdf" target="_blank" className="cta-btn">
+                Download Resume ↓
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <div className="section">
+          <span className="eyebrow">What people say</span>
+          <div className="quote-grid">
+            <div key="hi" className="quote-card">
+              <div className="quote-mark">"</div>
+              <p className="quote-text">
+                "Ananya is a dependable and creative team member who
+                consistently delivers high-quality work. Her ability to analyze
+                complex problems and communicate solutions clearly has been
+                invaluable to our projects."
+              </p>
+              <p className="quote-text">
+                "Ananya has consistently demonstrated a strong work ethic and a
+                positive attitude. Her ability to collaborate effectively with
+                others has made her a pleasure to work with."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CASE STUDIES SECTION */}
+        <section id="case-studies" className="section">
+          <span className="eyebrow">Strategic Case Studies</span>
+          <h2 className="section-title">Campaign Sprints</h2>
+          <p className="section-sub">
+            From brief to execution — a detailed look at how I approach
+            communications strategy.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <div className="sprint-list">
+            {campaignData.map((campaign, index) => (
+              <div key={campaign.id} className="sprint-card">
+                <div className="sprint-header">
+                  {/* Formats numbers as 01, 02, 03 */}
+                  <span className="sprint-num">0{index + 1}</span>
+                  <span className="sprint-title">{campaign.title}</span>
+                </div>
+                <div className="sprint-body">
+                  <div className="sprint-col">
+                    <div className="sprint-col-label pink">Challenge</div>
+                    <p className="sprint-col-text">{campaign.challenge}</p>
+                  </div>
+                  <div className="sprint-col">
+                    <div className="sprint-col-label orange">Strategy</div>
+                    <p className="sprint-col-text">{campaign.strategy}</p>
+                  </div>
+                  <div className="sprint-col">
+                    <div className="sprint-col-label pink">Execution</div>
+                    <p className="sprint-col-text">{campaign.execution}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* COLLATERAL */}
+        <section id="collateral" className="section">
+          <span className="eyebrow">Written & Digital Collateral</span>
+          <h2 className="section-title">Work Samples</h2>
+          <p className="section-sub">
+            A selection of full-length deliverables across formats and
+            audiences.
+          </p>
+
+          <div className="writing-pieces-list flex flex-col gap-12 mt-10">
+            {[
+              {
+                category: "OP-ED",
+                title: "We need to stop calling Chess a sport",
+                content:
+                  "Opinion | Ananya Bhatia | Wednesday, Apr 8, 2026\n\nPicture an athlete.\n\nWho popped into your head? I’m sure most of you imagined a famous sportsperson, perhaps Serena Williams, or Michael Phelps, or maybe a generic image of a sweaty, muscular person sporting athletic gear.\n\nNow, did anyone picture Magnus Carlsen? Hikaru Nakamura? Let’s be real. You didn’t. World-class strategists as they may be, chess grandmasters are not who come to mind when one considers the greatest athletes of our generation.\n\nSo, is it fair to call chess a sport? I do not think so, and I have a variety of arguments as to why.\n\nHow does one define an athlete? Almost all semantic sources include the word ‘physical’ in their definitions, citing examples such as swimming, basketball, and even horseback riding. Interestingly, nowhere do they include chess, or any similar seated and sedentary pastime, which brings me into my next argument. Where does it end? If we allow high school varsity chess, does that provide an entreé for varsity checkers? What’s next, varsity Go? Varsity tic-tac-toe? Accepting chess into the world of sports thus sets a dangerous precedent.\n\nMoreover, are we not undermining the decades of extreme physical training required to perform great athletic feats when we award the same titles to players of chess? This is not to say that chess is beneath any conventional sport, but rather, that we do both categories of mental and physical achievement a disservice when we conflate them.\n\nTo be sure, chess creates a similar sense of community as athletics through teams, tournaments, and spectation, but if we commit ourselves to this line of reasoning, we risk allowing competitive debate a name in the realm of sport.\n\nSo, reader, I invite you to consider: the next time someone asks you what your favorite sport is, will you say chess?",
+              },
+              {
+                category: "PRESS RELEASE",
+                title:
+                  "Young Man Starts Street Fight and Gets Rehomed To Bougie Neighborhood",
+                content:
+                  "How the Fresh Prince Got His Iconic Moniker\n\nBEL-AIR, Calif., September 10, 1990 - West Philadelphia’s Will Smith, an easygoing, charismatic teenager, was recently relocated from his mother’s custody to his wealthy aunt and uncle’s mansion in the glitzy neighborhood of Bel-Air in Los Angeles. Spending the majority of his time pursuing outdoor activities, Smith engaged in hobbies such as basketball and “chillin’ out, maxin’, [and] relaxin’” on the school playground. However, his time in Philadelphia came to a sudden and tragic end, as Smith was caught in an encounter with some questionable characters while shooting hoops with his friends.\n\nDespite having spent over five thousand hours playing the sport, Smith was not particularly gifted at basketball, and his lack of innate talent ultimately led to his downfall as he evaded two defenders from the opposing team and launched the ball in the air, aiming to score a three-pointer. Unfortunately, due to Smith’s subpar motor skills, the ball slid around the rim and ricocheted off the backboard, speeding through the air like a cursed missile in the direction of some young men and their communal boombox. Smith and his friends observed in horror as the ball gracefully arced through the air and bounced off of the head of the group’s leader. Instantaneously, Will was surrounded by scowling men, and did what any reasonable person would do: he punched the already concussed ringleader. Within minutes, Smith lay knocked out on the asphalt, and news of her son’s delinquency reached his mother.\n\n“You're movin' with your auntie and uncle in Bel-Air”, said Mrs. Smith, and thus Will’s fate was sealed. He was seen hailing a cab with the license plate ‘FRESH’, and later conversed with the cab driver, directing him to his new abode. At around 7 or 8PM, Smith arrived and took in the grandeur of the mansion: he was there, and ready to “sit on [his] throne as the prince of Bel-Air”. And thus, Will Smith became the Fresh Prince.\n\nAbout the Bel-Air Students’ Daily\n\nThe Bel-Air Students’ Daily is a student-run news organization based in Los Angeles, California. We provide daily reporting on local events, school athletics, and community shifts affecting the Bel-Air area. Our staff is committed to documenting the lives of residents and students with clarity and local perspective.",
+              },
+              {
+                category: "HOLDING STATEMENT",
+                title: "Old Orchard Shopping Center Santa Crisis",
+                content:
+                  "Old Orchard Shopping Center is aware of reports of Santa from the Children's Santa Exhibit being involved in an altercation. We have confirmed that the Santa on hire did, in fact, steal a purse from an old lady and run into Macy's in front of a group of schoolchildren from the local elementary school who were on a field trip.\n\nAccording to our team on-site, the victim, 72 year old Susan Davis, is shaken but feeling alright, and we have established contact with her family. The Children's Santa Exhibit has been temporarily shut down and the children have been sent back to their schools. Our security crew is working to locate Santa and the stolen purse.\n\nIf you or anyone you know has spotted Santa, please contact our security team at (773)-940-3928.\n\nOld Orchard will provide updates on the situation at news.oldorchard.mall/santa.",
+              },
+            ].map((piece, i, arr) => (
+              <div key={i} className="writing-piece w-full max-w-4xl mx-auto">
+                {/* Header */}
+                <div className="mb-6 text-center sm:text-left">
+                  <span className="inline-block px-4 py-1.5 bg-pink-100 text-pink-500 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                    {piece.category}
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+                    {piece.title}
+                  </h3>
+                </div>
+
+                {/* Full Text Content */}
+                <div className="text-gray-600 leading-relaxed whitespace-pre-wrap font-medium text-lg bg-white/50 p-6 md:p-8 rounded-3xl border border-pink-50 shadow-sm">
+                  {piece.content}
+                </div>
+
+                {/* Divider (Hides after the last item) */}
+                {i !== arr.length - 1 && (
+                  <div className="mt-12 border-b-2 border-dashed border-pink-200 w-2/3 mx-auto"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CRISIS SECTION */}
+        <section id="crisis" className="section">
+          <div className="crisis-wrap">
+            <div className="crisis-blob"></div>
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <div className="crisis-badge">⚡ Crisis Comms</div>
+              <h2 className="crisis-title">
+                Crisis Communications:
+                <br />
+                Homelander
+              </h2>
+              <p className="crisis-source mb-8">
+                Content sourced from Campaign Sprint 4 Incident
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                {crisisStatements.map((stmt, index) => (
+                  <div
+                    key={index}
+                    className="crisis-card flex flex-col h-full bg-white/80 backdrop-blur-sm p-6 rounded-3xl border border-pink-100 shadow-sm"
+                  >
+                    <h3 className="crisis-card-title text-xl font-bold text-gray-800 mb-3">
+                      {stmt.title}
+                    </h3>
+                    <p className="crisis-card-text text-gray-600 leading-relaxed font-medium flex-grow">
+                      {stmt.content}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* BLOG */}
+        <section id="blog" className="section">
+          <span className="eyebrow">Thought-Leadership Blog</span>
+          <h2 className="section-title">Writing & Reflections</h2>
+          <p className="section-sub">
+            Observations on strategic comms, campaigns, and building a voice.
+          </p>
+          <div className="blog-grid">
+            {[1, 2].map((i) => (
+              <div key={`ind-${i}`} className="blog-card">
+                <span className="blog-tag pink">Individual Assignment</span>
+                <h3 className="blog-title">[Blog Post Title {i}]</h3>
+                <p className="blog-snippet">
+                  [Insert snippet from your weekly journal entry or individual
+                  assignment — something that shows your perspective.]
+                </p>
+                <a href="#" className="blog-link">
+                  Read Article →
+                </a>
+              </div>
+            ))}
+            {[1, 2].map((i) => (
+              <div key={`grp-${i}`} className="blog-card alt">
+                <span className="blog-tag muted">Group Project</span>
+                <h3 className="blog-title">[Group Campaign {i}]</h3>
+                <p className="blog-snippet">
+                  [Summary of group project dynamics, your contributions, and
+                  campaign outcomes.]
+                </p>
+                <a href="#" className="blog-link orange">
+                  View Project →
+                </a>
+              </div>
+            ))}
+            <div className="blog-card">
+              <span className="blog-tag pink">Media Piece</span>
+              <div className="media-thumb">[Visual Asset]</div>
+              <h3 className="blog-title">[Visual Comms Asset]</h3>
+              <p className="blog-snippet">
+                [Explanation of your design choices and intended audience for
+                this media piece.]
+              </p>
+              <a href="#" className="blog-link">
+                View Full Media →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer className="footer">
+          © {new Date().getFullYear()} Ananya — Strategic Communications
+          Portfolio
+        </footer>
+      </div>
+    </>
   );
 }
