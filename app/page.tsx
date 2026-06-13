@@ -813,10 +813,10 @@ export default function Portfolio() {
               <div key={i} className="writing-piece w-full max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-6 text-center sm:text-left">
-                  <span className="inline-block px-4 py-1.5 bg-pink-100 text-pink-500 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                  <span className="inline-block px-4 py-1.5 bg-pink-100 text-pink-500 rounded-full text-xs font-bold uppercase tracking-wider mb-3 mt-5">
                     {piece.category}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mt-5">
                     {piece.title}
                   </h3>
                 </div>
