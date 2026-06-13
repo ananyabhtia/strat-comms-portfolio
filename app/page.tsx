@@ -55,6 +55,33 @@ export default function Portfolio() {
         "I developed the core launch strategy, beginning with a mystery phase of blank black squares posted by our influencer partners. I then structured a series of artificial, limited-edition product drops to manufacture scarcity and demand. Additionally, I directed the campaign's visual aesthetic, utilizing dark tones, metallic finishes, and a trophy-shaped bottle, to outsell our competitor and capture our target audience.",
     },
   ];
+
+  {
+    /* BLOG DATA */
+  }
+  const blogPosts = [
+    {
+      tag: "Journal #1",
+      tagClass: "pink",
+      title: "Product Differentiation & The Shelf Strategy",
+      content:
+        "As a marketing professional, it is critical to know how to differentiate your product and promote it according to the target audience you have selected. Given that most consumer products are not unique or patented, there is a high chance that the brands we are working with have competitors selling effectively identical goods, so we must be aware of strategies to highlight our product on the shelf.\n\nThis could be by elevating certain characteristics of our product to appeal to a sense of luxury, or by creating associations with certain ideologies to appeal to groups that identify with them. In this way, completely ordinary products that have no USPs relative to their competitors can shine for their specific segments.\n\nLiquid Death is a packaged water brand that was founded in 2018, but has recently acquired a billion-dollar valuation as of 2024. This brand is an excellent example of differentation in a market wherein the product is completely identical: water. By creating a heavy-metal aesthetic with the slogan 'Murder Your Thirst,' the company flipped the traditional narrative of water as a pure, rejuvenating wellness product into a symbol of punk-rock and counter-culture. Their massive valuation proves that when a product lacks a functional unique selling proposition, differentiated branding can carve out an entirely new niche.",
+    },
+    {
+      tag: "Journal #2",
+      tagClass: "pink",
+      title: "Crisis Leadership: Choosing the Right Face",
+      content:
+        "In the marketing world, it is impossible to avoid public relations mistakes all of the time, and as future professionals, we should know which strategies to employ during specific crises. Often, it can be helpful to have a C-suite executive directly address the public to ensure the company appears genuine and humble. Other times, we may instead recommend that a public relations expert step in and handle front-facing dialogue to distance the company from the individual(s) at fault. Therefore, when we enter the marketing workplace, we should be able to accurately distinguish the nature of the situation and select the right face for the response.\n\nThis month, Standard Chartered Bank CEO Bill Winters came under fire for referring to employees vulnerable to AI-related layoffs as 'low value human capital' during a conference. At first, the CEO attempted to clarify his verbiage through two LinkedIn posts that contained transcripts in an attempt to accurately situate his remarks, but commenters were not convinced. In this situation, Standard Chartered may have been better served by a media trained professional with the knowledge of how to correctly spin an obvious blunder on the CEO's part. Instead, social media users felt that his strategy backfired and seemed to double down on his word choice, casting light on what he truly believed regarding the value of human labor.",
+    },
+    {
+      tag: "Journal #3",
+      tagClass: "pink",
+      title: "Stealing Thunder: When to Preempt the Narrative",
+      content:
+        "There are many strategies companies can choose to pursue when they misstep, including 'spin' and image restoration, and while they are all appropriate in certain situations, I like Stealing Thunder the most as it feels genuine and transparent. Stealing thunder refers to getting ahead of the media and reporting your mistake yourself before anyone else can. This makes the organization appear authentic, humble, and remorseful. 'Spin' falls into the manipulation category, image restoration can come off as inauthentic, and discourse of renewal may not work if the media has already influenced public opinion. Stealing thunder seems to be the most effective in most situations because it allows the company to put their perspective out first before the media is able to twist events and paint them in a negative light.\n\nIn the 2024 E. coli crisis, McDonald’s utilized stealing thunder by getting ahead of the news to disclose the outbreak themselves. Instead of waiting for the CDC to report the narrative or for media reports to leak, the company proactively found the specific source, the onions they put on the burgers, and reported it immediately. By owning the bad news, they framed themselves as a transparent rather than negligent. This move effectively reduced the shock value of the story, prevented the media from being able to blow it out of proportion, and allowed McDonald's to maintain consumer trust despite a severe operational failure.",
+    },
+  ];
   return (
     <>
       <style>{`
@@ -547,6 +574,24 @@ export default function Portfolio() {
           border: 1px solid #FFD6E9;
         }
 
+        /* WRITING SAMPLES */
+        .writing-piece {
+          width: 100%;
+        }
+        .writing-piece-content {
+          color: #6B5060;
+          line-height: 1.75;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          font-size: 1rem;
+          background: rgba(255, 255, 255, 0.5);
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+          border: 1px solid #FFE8F1;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
         /* FOOTER */
         .footer {
           background: #1A1018;
@@ -590,14 +635,6 @@ export default function Portfolio() {
         <section id="about" className="hero flex flex-col gap-6">
           {/* Image and Name In-Line */}
           <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8">
-            <div className="w-32 h-32 md:w-40 md:h-40 bg-pink-50 rounded-full border-4 border-white shadow-sm flex items-center justify-center text-pink-400 font-medium shrink-0 overflow-hidden">
-              <img
-                src="ananya_image.jpg"
-                alt="Ananya"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
             <h5 className="hero-name relative inline-block m-0">
               Hi, I'm Ananya
               <svg
@@ -752,9 +789,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Full Text Content */}
-                <div className="text-gray-600 leading-relaxed whitespace-pre-wrap font-medium text-lg bg-white/50 p-6 md:p-8 rounded-3xl border border-pink-50 shadow-sm">
-                  {piece.content}
-                </div>
+                <div className="writing-piece-content">{piece.content}</div>
 
                 {/* Divider (Hides after the last item) */}
                 {i !== arr.length - 1 && (
@@ -777,7 +812,7 @@ export default function Portfolio() {
                 Homelander
               </h2>
               <p className="crisis-source mb-8">
-                Content sourced from Campaign Sprint 4 Incident
+                Content sourced from Campaign Sprint 4
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -798,52 +833,30 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-        {/* BLOG */}
+
+        {/* BLOG SECTION */}
         <section id="blog" className="section">
-          <span className="eyebrow">Thought-Leadership Blog</span>
+          <span className="eyebrow">Strategic Communications Blog</span>
           <h2 className="section-title">Writing & Reflections</h2>
           <p className="section-sub">
             Observations on strategic comms, campaigns, and building a voice.
           </p>
           <div className="blog-grid">
-            {[1, 2].map((i) => (
-              <div key={`ind-${i}`} className="blog-card">
-                <span className="blog-tag pink">Individual Assignment</span>
-                <h3 className="blog-title">[Blog Post Title {i}]</h3>
-                <p className="blog-snippet">
-                  [Insert snippet from your weekly journal entry or individual
-                  assignment — something that shows your perspective.]
+            {/* Dynamically Rendered Individual Assignments */}
+            {blogPosts.map((post, idx) => (
+              <div
+                key={`ind-${idx}`}
+                className="blog-card flex flex-col h-full"
+              >
+                <span className={`blog-tag ${post.tagClass}`}>{post.tag}</span>
+                <h3 className="blog-title text-xl font-bold mt-2 mb-4">
+                  {post.title}
+                </h3>
+                <p className="blog-snippet text-gray-600 leading-relaxed text-sm whitespace-pre-wrap flex-grow mb-6 font-medium">
+                  {post.content}
                 </p>
-                <a href="#" className="blog-link">
-                  Read Article →
-                </a>
               </div>
             ))}
-            {[1, 2].map((i) => (
-              <div key={`grp-${i}`} className="blog-card alt">
-                <span className="blog-tag muted">Group Project</span>
-                <h3 className="blog-title">[Group Campaign {i}]</h3>
-                <p className="blog-snippet">
-                  [Summary of group project dynamics, your contributions, and
-                  campaign outcomes.]
-                </p>
-                <a href="#" className="blog-link orange">
-                  View Project →
-                </a>
-              </div>
-            ))}
-            <div className="blog-card">
-              <span className="blog-tag pink">Media Piece</span>
-              <div className="media-thumb">[Visual Asset]</div>
-              <h3 className="blog-title">[Visual Comms Asset]</h3>
-              <p className="blog-snippet">
-                [Explanation of your design choices and intended audience for
-                this media piece.]
-              </p>
-              <a href="#" className="blog-link">
-                View Full Media →
-              </a>
-            </div>
           </div>
         </section>
 
