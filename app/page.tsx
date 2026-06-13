@@ -23,12 +23,12 @@ export default function Portfolio() {
         "Last night, Homelander was involved in an incident that has understandably raised public concern. While we do not condone the behavior shown in the video, we recognize the immense pressure and responsibility that Homelander carry every day in protecting the American people. We are currently reviewing the full context of the situation and remain confident in Homelander’s long-standing commitment to national safety and security. We sincerely apologize to the employees and customers affected by the incident and appreciate the public’s patience as we continue to address this matter responsibly.",
     },
     {
-      title: "A. “Acknowledge & Act” Statement",
+      title: "Acknowledge & Act Statement",
       content:
         "Vought is aware of the incident involving Homelander that took place at VoughtBurger last night. We are interviewing those most affected and determining the most productive course of action. We believe this can be a learning opportunity for all involved. Please watch this space for any updates.",
     },
     {
-      title: "B. “Correction” Statement",
+      title: "Correction Statement",
       content:
         "Vought would like to clarify the facts of the incident at VoughtBurger last night. Rumors have been spread that misrepresent the situation and paint Homelander in a negative light. We are not defending Homelander’s actions nor his words, but he did not use any slurs or purposefully inflammatory language.",
     },
@@ -591,6 +591,29 @@ export default function Portfolio() {
           border: 1px solid #FFE8F1;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
+        .writing-piece-image {
+          background: rgba(255, 255, 255, 0.5);
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+          border: 1px solid #FFE8F1;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .writing-piece-img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 0.75rem;
+          margin-bottom: 1rem;
+        }
+        .writing-piece-img-caption {
+          color: #6B5060;
+          font-size: 0.95rem;
+          text-align: center;
+          font-style: italic;
+          margin-top: 0.5rem;
+        }
 
         /* FOOTER */
         .footer {
@@ -760,6 +783,7 @@ export default function Portfolio() {
               {
                 category: "OP-ED",
                 title: "We need to stop calling Chess a sport",
+                type: "text",
                 content:
                   "Opinion | Ananya Bhatia | Wednesday, Apr 8, 2026\n\nPicture an athlete.\n\nWho popped into your head? I’m sure most of you imagined a famous sportsperson, perhaps Serena Williams, or Michael Phelps, or maybe a generic image of a sweaty, muscular person sporting athletic gear.\n\nNow, did anyone picture Magnus Carlsen? Hikaru Nakamura? Let’s be real. You didn’t. World-class strategists as they may be, chess grandmasters are not who come to mind when one considers the greatest athletes of our generation.\n\nSo, is it fair to call chess a sport? I do not think so, and I have a variety of arguments as to why.\n\nHow does one define an athlete? Almost all semantic sources include the word ‘physical’ in their definitions, citing examples such as swimming, basketball, and even horseback riding. Interestingly, nowhere do they include chess, or any similar seated and sedentary pastime, which brings me into my next argument. Where does it end? If we allow high school varsity chess, does that provide an entreé for varsity checkers? What’s next, varsity Go? Varsity tic-tac-toe? Accepting chess into the world of sports thus sets a dangerous precedent.\n\nMoreover, are we not undermining the decades of extreme physical training required to perform great athletic feats when we award the same titles to players of chess? This is not to say that chess is beneath any conventional sport, but rather, that we do both categories of mental and physical achievement a disservice when we conflate them.\n\nTo be sure, chess creates a similar sense of community as athletics through teams, tournaments, and spectation, but if we commit ourselves to this line of reasoning, we risk allowing competitive debate a name in the realm of sport.\n\nSo, reader, I invite you to consider: the next time someone asks you what your favorite sport is, will you say chess?",
               },
@@ -767,14 +791,23 @@ export default function Portfolio() {
                 category: "PRESS RELEASE",
                 title:
                   "Young Man Starts Street Fight and Gets Rehomed To Bougie Neighborhood",
+                type: "text",
                 content:
                   "How the Fresh Prince Got His Iconic Moniker\n\nBEL-AIR, Calif., September 10, 1990 - West Philadelphia’s Will Smith, an easygoing, charismatic teenager, was recently relocated from his mother’s custody to his wealthy aunt and uncle’s mansion in the glitzy neighborhood of Bel-Air in Los Angeles. Spending the majority of his time pursuing outdoor activities, Smith engaged in hobbies such as basketball and “chillin’ out, maxin’, [and] relaxin’” on the school playground. However, his time in Philadelphia came to a sudden and tragic end, as Smith was caught in an encounter with some questionable characters while shooting hoops with his friends.\n\nDespite having spent over five thousand hours playing the sport, Smith was not particularly gifted at basketball, and his lack of innate talent ultimately led to his downfall as he evaded two defenders from the opposing team and launched the ball in the air, aiming to score a three-pointer. Unfortunately, due to Smith’s subpar motor skills, the ball slid around the rim and ricocheted off the backboard, speeding through the air like a cursed missile in the direction of some young men and their communal boombox. Smith and his friends observed in horror as the ball gracefully arced through the air and bounced off of the head of the group’s leader. Instantaneously, Will was surrounded by scowling men, and did what any reasonable person would do: he punched the already concussed ringleader. Within minutes, Smith lay knocked out on the asphalt, and news of her son’s delinquency reached his mother.\n\n“You're movin' with your auntie and uncle in Bel-Air”, said Mrs. Smith, and thus Will’s fate was sealed. He was seen hailing a cab with the license plate ‘FRESH’, and later conversed with the cab driver, directing him to his new abode. At around 7 or 8PM, Smith arrived and took in the grandeur of the mansion: he was there, and ready to “sit on [his] throne as the prince of Bel-Air”. And thus, Will Smith became the Fresh Prince.\n\nAbout the Bel-Air Students’ Daily\n\nThe Bel-Air Students’ Daily is a student-run news organization based in Los Angeles, California. We provide daily reporting on local events, school athletics, and community shifts affecting the Bel-Air area. Our staff is committed to documenting the lives of residents and students with clarity and local perspective.",
               },
               {
                 category: "HOLDING STATEMENT",
                 title: "Old Orchard Shopping Center Santa Crisis",
+                type: "text",
                 content:
                   "Old Orchard Shopping Center is aware of reports of Santa from the Children's Santa Exhibit being involved in an altercation. We have confirmed that the Santa on hire did, in fact, steal a purse from an old lady and run into Macy's in front of a group of schoolchildren from the local elementary school who were on a field trip.\n\nAccording to our team on-site, the victim, 72 year old Susan Davis, is shaken but feeling alright, and we have established contact with her family. The Children's Santa Exhibit has been temporarily shut down and the children have been sent back to their schools. Our security crew is working to locate Santa and the stolen purse.\n\nIf you or anyone you know has spotted Santa, please contact our security team at (773)-940-3928.\n\nOld Orchard will provide updates on the situation at news.oldorchard.mall/santa.",
+              },
+              {
+                category: "VISUAL ASSET",
+                title: "Product Pitch Deck",
+                type: "image",
+                imageSrc: "visual-asset.png",
+                description: "Campaign Sprint 3",
               },
             ].map((piece, i, arr) => (
               <div key={i} className="writing-piece w-full max-w-4xl mx-auto">
@@ -789,7 +822,25 @@ export default function Portfolio() {
                 </div>
 
                 {/* Full Text Content */}
-                <div className="writing-piece-content">{piece.content}</div>
+                {piece.type === "text" && (
+                  <div className="writing-piece-content">{piece.content}</div>
+                )}
+
+                {/* Image Content */}
+                {piece.type === "image" && (
+                  <div className="writing-piece-image">
+                    <img
+                      src={piece.imageSrc}
+                      alt={piece.title}
+                      className="writing-piece-img"
+                    />
+                    {piece.description && (
+                      <p className="writing-piece-img-caption">
+                        {piece.description}
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 {/* Divider (Hides after the last item) */}
                 {i !== arr.length - 1 && (
